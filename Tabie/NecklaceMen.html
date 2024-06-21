@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Necklaces for Men - Tee Tee Jewellery</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+    <script src="script.js" defer></script> <!-- Link to JavaScript file -->
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <h1>Necklaces for Men</h1> <!-- Main title of the page -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li> <!-- Link to Home page -->
+            <li><a href="contact.html">Contact Us</a></li> <!-- Link to Contact Us page -->
+            <li>
+                <a href="index.html">Log in</a> <!-- Log in button -->
+                <a href="#" onclick="logout()">Log Out</a> <!-- Log out button -->
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Products Section -->
+<section class="product-category">
+    <h2>Our Collection</h2>
+
+    <!-- Container for the product grid -->
+    <div class="product-grid">
+
+        <!-- Ensure IDs and prices match the products array -->
+        <div class="product">
+            <img src="Tee tee website/africasilvermennecklace.jpg" alt="Men Necklace" class="product-image">
+            <h3>Silver Africa Necklace</h3>
+            <p class="price" id="price-1">Price: R 250</p>
+            <button class="add-to-cart" onclick="addToCart('Silver Africa Necklace', 250)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="Tee tee website/goldafricanecklacemen.jpg" alt="Men Necklace" class="product-image">
+            <h3>Gold Africa Necklace</h3>
+            <p class="price" id="price-2">Price: R 350</p>
+            <button class="add-to-cart" onclick="addToCart('Gold Africa Necklace', 350)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="Tee tee website/goldhandmennecklace.jpg" alt="Men Necklace" class="product-image">
+            <h3>Gold Hand Necklace</h3>
+            <p class="price" id="price-3">Price: R 350</p>
+            <button class="add-to-cart" onclick="addToCart('Gold Hand Necklace', 350)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="Tee tee website/silvercross mennecklace.jpg" alt="Men Necklace" class="product-image">
+            <h3>Silver Cross Necklace</h3>
+            <p class="price" id="price-4">Price: R 300</p>
+            <button class="add-to-cart" onclick="addToCart('Silver Cross Necklace', 300)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="Tee tee website/goldcrossmennecklace.jpg" alt="Men Necklace" class="product-image">
+            <h3>Gold Cross Necklace</h3>
+            <p class="price" id="price-5">Price: R 300</p>
+            <button class="add-to-cart" onclick="addToCart('Gold Cross Necklace', 300)">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+
+<footer>
+    <div class="footer-links">
+        <a href="terms.html">Terms of Service</a> <!-- Link to Terms of Service page -->
+        <a href="privacy.html">Privacy Policy</a> <!-- Link to Privacy Policy page -->
+    </div>
+
+    <p>&copy; 2024 Tee Tee Jewellery. All rights reserved.</p> <!-- Copyright notice -->
+</footer>
+<!-- Shopping Cart -->
+<div class="shopping-cart" onclick="toggleCart()">🛒</div>
+<div class="cart-items">
+    <!-- Cart items displayed here -->
+</div>
+
+<script>
+    // Function to display alert on page load
+    window.onload = function() {
+        alert("Please log in/ sign up before making a purchase.If you have not already logged in");
+    }
+
+    function logout() {
+        window.location.href = 'index.html';
+    }
+</script></body>
+</html>
+

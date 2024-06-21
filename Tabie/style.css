@@ -1,0 +1,358 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* body takes  full  height */
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("Tee tee website/backg.jpg") no-repeat center center;
+    background-size: cover;
+    opacity: 0.7; /* Adjusted to the  desired opacity */
+    z-index: -1; /* to be behind the content */
+}
+
+header{
+    background: rgba(255, 255, 255, 0.7); /* white background for readability */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px;
+    box-sizing: border-box;
+    position: relative; /*  above the background image */
+    z-index: 1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.7); /* Reduced opacity for readability */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Increase opacity on hover */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8); /* Reduced opacity */
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.search-form input {
+    width: 150px;
+    padding: 10px 30px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-form button {
+    padding: 10px 30px;
+    font-size: 18px;
+    background-color: #716C82;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #474352;
+}
+
+.featured-products, .testimonials, .newsletter {
+    padding: 20px;
+
+    border-radius: 8px;
+    text-align: center;
+    margin: 10px;
+}
+
+.product-grid, .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+.product, .testimonial {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.product h3 {
+    margin: 10px 0;
+}
+
+.product p {
+    margin: 10px 0;
+}
+
+.product .btn, .newsletter button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #716C82;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.product .btn:hover, .newsletter button:hover {
+    background-color: #474352;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Login & Signup Form Styles */
+.login-container, .signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h1, .signup-container h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #716C82;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #474352;
+}
+
+form a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #716C82;
+    transition: color 0.3s ease;
+}
+
+form a:hover {
+    color: #474352;
+}
+
+/* CSS styles for the shopping cart display */
+.shopping-cart {
+    position: fixed;
+    top: 50px;
+    right: 60px;
+    background-color: lightgrey;
+    padding: 30px;
+    border-radius: 70%;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.cart-items {
+    display: none;
+    position: absolute;
+    top: 100px; /* Adjusted to make room for the shopping cart icon */
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    z-index: 998; /*  above other elements */
+    width: 400px; /*  width adjusted */
+    max-height: 450px; /* Limit maximum height for scrolling */
+    overflow-y: auto;
+}
+
+.cart-items div {
+    margin-bottom: 10px; /* Add spacing between cart items */
+}
+
+.total {
+    text-align: right; /* Aligned total balance to the right */
+    font-weight: bold; /* for total balance bold */
+}
+
+/* CSS for Checkout Page */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /*  body takes up at full  height */
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    flex: 1; /* the main section to grow and take up remaining vertical space */
+}
+
+
+form {
+    width: 100%;
+    max-width: 200px; /*  maximum width of the form */
+    margin: 0 auto;
+}
+
+button[type="submit"] {
+    width: 100%; /* submit button fill the width of its container */
+     margin-top: 20px; /*  space added between the last input and the button */
+        font-weight: bold;
+}
+
+/* Log out button styles */
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #ff1a1a;
+}
+/* Style for Payment icons */
+
+    .payment-method-icons {
+      display: inline-flex;
+      align-items: center; /* Align icons vertically */
+      margin-right: 10px;
+    }
+
+    .payment-icon {
+      width: 40px;
+      margin-right: 10px;
+    }
+
